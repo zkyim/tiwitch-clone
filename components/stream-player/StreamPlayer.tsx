@@ -44,13 +44,15 @@ export const StreamPlayer = ({
 }: StreamPlayerProps) => {
     if (!stream) return null;
     
-    const { collapsed } = useChatSidebar(state => state);
+    
     const { token, identity, name } = useViewerToken(user.id);
- 
+    
     if (!token || !identity || !name) return (
       <StreamPlayerSkeleton />
     )
 
+    const { collapsed } = useChatSidebar(state => state);
+    
   return (
     <>
       {collapsed && (
