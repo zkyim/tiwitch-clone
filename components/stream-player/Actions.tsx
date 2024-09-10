@@ -26,7 +26,7 @@ export const Actions = ({
     const handleFollow = () => {
         startTransaction(() => {
             onFollow(hostIdentity)
-            .then((data: any) => toast.success(`You are now following ${data.following.username}`))
+            .then(() => toast.success(`You are now following`))
             .catch(() => toast.error("Something went wrong"));
         })
     }
