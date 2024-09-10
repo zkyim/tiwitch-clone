@@ -1,7 +1,6 @@
 "use client";
 import { Hint } from '@/components/hint';
 import { Button } from '@/components/ui/button';
-import { Skeleton } from '@/components/ui/skeleton';
 import { useChatSidebar } from '@/store/use-chat-sidebar';
 import { ArrowLeftFromLine, ArrowRightFromLine } from 'lucide-react';
 import React from 'react'

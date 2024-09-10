@@ -2,7 +2,6 @@ import { Stream, User } from '@prisma/client'
 import Link from 'next/link';
 import React from 'react'
 import { Thumbnail, ThumbnailSkeleton } from './Thumbnail';
-import LiveBadge from '@/components/LiveBadge';
 import { UserAvatar, UserAvatarSekeleton } from '../../_components/sidebar/UserAvatar';
 import { Skeleton } from '@/components/ui/skeleton';
 

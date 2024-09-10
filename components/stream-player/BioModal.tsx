@@ -1,4 +1,3 @@
-import { useRouter } from 'next/navigation';
 import { Button } from '../ui/button';
 import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
 import React, { ElementRef, useRef, useState, useTransition } from 'react'
@@ -13,7 +12,6 @@ interface BioModalProps {
 export const BioModal = ({
     initialValue
 }: BioModalProps) => {
-    const router = useRouter();
     const [isPending, startTransaction] = useTransition();
     const [value, setValue] = useState(initialValue || "");
     const closeRef = useRef<ElementRef<"button">>(null);

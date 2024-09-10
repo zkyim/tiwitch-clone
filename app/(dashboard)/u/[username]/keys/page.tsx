@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button'
 import React from 'react'
 import { UrlCard } from './_components/UrlCard'
 import { getSelf } from '@/lib/auth-service'

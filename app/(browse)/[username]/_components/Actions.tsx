@@ -1,6 +1,6 @@
 "use client"
-import { onBlock, onUnblock } from '@/actions/block';
-import { onFollow, unfollow } from '@/actions/follow';
+import { onUnblock } from '@/actions/block';
+import { onFollow, Unfollow } from '@/actions/follow';
 import { Button } from '@/components/ui/button'
 import React, { useTransition } from 'react'
 import { toast } from 'sonner';
@@ -19,14 +19,14 @@ const Actions = ({
     const handleFollow = () => {
         startTransition(() => {
             onFollow(userId)
-            .then((data) => toast.success(`You are now following ${data.following.username}`))
+            .then((data: any) => toast.success(`You are now following ${data.following.username}`))
             .catch(() => toast.error("something went wrong"));
         })
     }
 
     const handleUnFollow = () => {
         startTransition(() => {
-            unfollow(userId)
+            Unfollow(userId)
             .then((data) => toast.success(`You have unfollow ${data.following.username}`))
             .catch(() => toast.error("something went wrong"));
         })
